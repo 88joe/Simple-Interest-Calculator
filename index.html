@@ -1,16 +1,33 @@
+<!doctype html>
+
 <html>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
+    <form>
+        <fieldset>   
     <body>
+    
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        Amount <input type="number"  id="amount">  <br/><br>
+            Interest Rate<input type="range" id="b" name="b" value="6.6" min="1.0" max="12.0" step=".5" oninput="result.value=parseFloat(b.value)"/>
+            <output name="result" for="">6.0</output>% <br/><br>
+   
+        No. of Years <input type="number"  id="years" min="1" max="20">  <br/><br>
 
-        <button onclick="compute()">Compute</button>
+        <button onclick="compute()">Compute Interest</button> <br/><br>
+        <div id="resText">
+            If you deposit <mark><span id="dp"></span></mark>,<br>
+            at an interest rate of <mark><span id="drate"></span>%</mark><br>
+            You will receive an amount of <mark><span id="dresult"></span></mark>,<br>
+            in the year <mark><span id="dyears"></span></mark>
+           </div>
+
     </body>
+
+    <h2> &copy Everyone Can Get Rich</h2>
+        </fieldset>
+    </form>
 </html>
